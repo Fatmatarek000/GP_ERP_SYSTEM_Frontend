@@ -17,8 +17,12 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import LineStyleIcon from '@mui/icons-material/LineStyle';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { DarkModeContext } from './../../context/darkModeContext';
+import {useContext} from "react";
 
 function Sidebar() {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -99,8 +103,8 @@ function Sidebar() {
         </ul>
       </div>
       <div className="bottom">
-      <div className="colorOption"></div>
-      <div className="colorOption"></div>
+      <div className="colorOption" onClick={() => dispatch({ type: "LIGHT" })}></div>
+      <div className="colorOption"  onClick={() => dispatch({ type: "DARK" })}></div>
       </div>
     </div>
   );
