@@ -25,15 +25,15 @@ export default function User() {
               className="userShowImg"
             />
             <div className="userShowTopTitle">
-              <span className="userShowUsername">Anna Becker</span>
-              <span className="userShowUserTitle">Software Engineer</span>
+              <span className="userShowUsername">Anna Becker </span>
+              <span className="userShowUserTitle">Software Engineer </span>
             </div>
           </div>
           <div className="userShowBottom">
             <span className="userShowTitle">Account Details</span>
             <div className="userShowInfo">
               <PermIdentityIcon className="userShowIcon" />
-              <span className="userShowInfoTitle">annabeck99</span>
+              <span className="userShowInfoTitle">annabeck999</span>
             </div>
             <div className="userShowInfo">
               <CalendarTodayIcon className="userShowIcon" />
