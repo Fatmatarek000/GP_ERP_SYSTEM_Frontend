@@ -29,7 +29,7 @@ const Datatable = () => {
               Delete
             </div>
             <div>
-            <Link to={"userId/edit" + params.row.id}>
+            <Link to={`${params.row.id}/edit`}>
             <button className="userListEdit">Edit</button>
           </Link>
             </div>
