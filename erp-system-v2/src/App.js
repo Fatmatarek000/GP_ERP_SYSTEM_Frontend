@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { productInputs, userInputs } from './formSource';
+import User from "./Pages/user/User";
 
 
 function App() {
@@ -21,12 +23,16 @@ function App() {
             <Route path="users">
               <Route index element={<List />} />
               <Route path=":userId" element={<Single />} />
-              <Route path="new" element={<New />} />
+              <Route path="new" element={<New  inputs={userInputs} title="Add New User"/>} />
+              <Route path="userId/edit" element={<User />}/>
+             
+           
             </Route>
+        
             <Route path="products">
               <Route index element={<List />} />
               <Route path=":productId" element={<Single />} />
-              <Route path="new" element={<New />} />
+              <Route path="new" element={<New inputs={productInputs}title="Add New Product" />} />
             </Route>
            
           </Route>

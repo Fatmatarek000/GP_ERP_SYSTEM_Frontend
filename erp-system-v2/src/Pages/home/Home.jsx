@@ -7,6 +7,7 @@ import Widget from '../../Components/widget/Widget';
 import "./home.scss";
 import Feature from './../../Components/feature/Feature';
 import Charts from './../../Components/Chart/Charts';
+import Table  from './../../Components/table/Table';
 const Home = () => {
   return (
     <div className='home'>
@@ -25,8 +26,13 @@ const Home = () => {
     
     <div className="charts">
     <Feature/>
-    <Charts/>
+    <Charts title="User Spending ( Last 6 Months)" aspect={2/1}/>
     </div>
+
+    <div className="listContainer">
+          <div className="listTitle">Latest Transactions</div>
+          <Table/>
+        </div>
     </div>
     </div>
   )
