@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./charts.scss";
 import {
   AreaChart,
@@ -17,12 +17,12 @@ const data = [
   { name: "June", Total: 1700 },
 ];
 
-function Charts({ aspect, title }) {
+function Charts({ aspect, title ,productData }) {
   return (
    
     <div className="chart">
     <div className="title">{title}</div>
-    <ResponsiveContainer width="100%" aspect={aspect}>
+    <ResponsiveContainer width="100%" data={productData} aspect={aspect}>
     <AreaChart
       width={730}
       height={250}

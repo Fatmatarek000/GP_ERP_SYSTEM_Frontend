@@ -6,9 +6,15 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 import { Link } from "react-router-dom";
 import "./user.css";
+import Sidebar from './../../Components/sidebar/Sidebar';
+import Navbar from './../../Components/navbar/Navbar';
 
 export default function User() {
   return (
+    <div className="list">
+    <Sidebar/>
+    <div className="listContainer">
+      <Navbar/>
     <div className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
@@ -117,5 +123,7 @@ export default function User() {
         </div>
       </div>
     </div>
+  </div>
+  </div>
   );
 }

@@ -76,7 +76,7 @@ export default function ProductList() {
         </Link>
       </div>
       
-      <DataGrid
+      <DataGrid className="datagrid"
 rows={data}
 disableSelectionOnClick
 columns={columns}

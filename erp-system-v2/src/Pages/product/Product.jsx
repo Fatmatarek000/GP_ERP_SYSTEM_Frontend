@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import "./product.css";
 import Charts from "../../Components/Chart/Charts";
-import {productData} from "../../dummyData"
+
 import PublishIcon from '@mui/icons-material/Publish';
+import Sidebar from "../../Components/sidebar/Sidebar";
+import Navbar from './../../Components/navbar/Navbar';
 
 export default function Product() {
   return (
+    <div className="list">
+   <Sidebar/>
+    <div className="listContainer">
+     <Navbar/>
     <div className="product">
       <div className="productTitleContainer">
         <h1 className="productTitle">Product</h1>
@@ -15,7 +21,7 @@ export default function Product() {
       </div>
       <div className="productTop">
           <div className="productTopLeft">
-              <Charts data={productData} dataKey="Sales" title="Sales Performance"/>
+          <Charts title="Sales Performance" aspect={4/1}/>
           </div>
           <div className="productTopRight">
               <div className="productInfoTop">
@@ -70,6 +76,8 @@ export default function Product() {
               </div>
           </form>
       </div>
+    </div>
+    </div>
     </div>
   );
 }
