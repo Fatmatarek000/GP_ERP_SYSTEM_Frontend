@@ -10,10 +10,12 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import TimelineIcon from '@mui/icons-material/Timeline';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import LineStyleIcon from '@mui/icons-material/LineStyle';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import TodayOutlinedIcon from '@mui/icons-material/TodayOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import { DarkModeContext } from './../../context/darkModeContext';
 import {useContext} from "react";
 import { Link } from "react-router-dom";
@@ -39,22 +41,7 @@ function Sidebar() {
             <span>Home</span>
             </Link>
           </li>
-          <li>
-          <Link to="/analysis" style={{ textDecoration: "none" }}>
-
-            <TimelineIcon className="icon"/>
-            
-            <span>Analysis</span>
-            </Link>
-          </li>
-          <li>
-          <Link to="/sales" style={{ textDecoration: "none" }}>
-
-            <TrendingUpIcon className="icon"/>
-            
-            <span>Sales</span>
-            </Link>
-          </li>
+    
           <p className="title">LISTS</p>
           <li>
           <Link to="/users" style={{ textDecoration: "none" }}>
@@ -98,8 +85,37 @@ function Sidebar() {
             <span>Delivery</span>
             </Link>
           </li>
+          <p className="title">Sales</p>
+          <li>
+          <Link to="/overview" style={{ textDecoration: "none" }}>
+            <PointOfSaleIcon className="icon"/>
+            <span>Overview</span>
+            </Link>
+          </li>
+
+          <li>
+          <Link to="/daily" style={{ textDecoration: "none" }}>
+            <TodayOutlinedIcon className="icon"/>
+            <span>Daily</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/monthly" style={{ textDecoration: "none" }}>
+            <CalendarMonthOutlinedIcon className="icon"/>
+            <span>Monthly</span>
+            </Link>
+          </li>
           
-         
+          <p className="title">Analysis</p>
+
+          <li>
+          <Link to="/analysis" style={{ textDecoration: "none" }}>
+
+            <TimelineIcon className="icon"/>
+            
+            <span>Analysis</span>
+            </Link>
+          </li>
           <p className="title">SERVICE</p>
           <li>
           <Link to="/system-health" style={{ textDecoration: "none" }}>
