@@ -17,6 +17,12 @@ const Monthly = () => {
     <div className="homeContainer">
     
     <Navbar/>
+
+
+
+
+
+    
     
     </div>
     </div>
