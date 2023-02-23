@@ -6,7 +6,7 @@ import Sidebar from '../../Components/sidebar/Sidebar';
 
 
 
-import'./monthly.css';
+import'./monthly.scss';
 
 const Monthly = () => {
   
