@@ -16,6 +16,9 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import TodayOutlinedIcon from '@mui/icons-material/TodayOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import GroupsIcon from '@mui/icons-material/Groups';
+import MovingIcon from '@mui/icons-material/Moving';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import { DarkModeContext } from './../../context/darkModeContext';
 import {useContext} from "react";
 import { Link } from "react-router-dom";
@@ -48,6 +51,27 @@ function Sidebar() {
 
             <PersonOutlineIcon className="icon" />
             <span>Users</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/employee" style={{ textDecoration: "none" }}>
+
+            <GroupsIcon className="icon" />
+            <span>Employees</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/customer" style={{ textDecoration: "none" }}>
+
+            <PeopleAltIcon className="icon" />
+            <span>Customers</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/supply" style={{ textDecoration: "none" }}>
+
+            <MovingIcon className="icon" />
+            <span>Suppliers</span>
             </Link>
           </li>
           <li>
