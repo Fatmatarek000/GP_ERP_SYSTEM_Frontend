@@ -61,11 +61,7 @@ export default class Monthly extends PureComponent {
     });
   };
 
-  render() {
-    const { activeIndex, data } = this.state;
-    const activeItem = data[activeIndex];
-    return (
-      <div className='home'>
+
     
     <Sidebar/>
     <div className="homeContainer">
