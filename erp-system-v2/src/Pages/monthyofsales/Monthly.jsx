@@ -63,24 +63,24 @@ export default class Monthly extends PureComponent {
 
 
     
-    <Sidebar/>
-    <div className="homeContainer">
-    <Navbar/>
+    <Sidebar />
+  <div className="homeContainer">
+    <Navbar />
     <div className="chart">
-    <div className="title">{this.props.title}</div>
-        <ResponsiveContainer width="100%" height={150}>
-          <BarChart width={150} height={80} data={data}>
-            <Bar dataKey="uv" onClick={this.handleClick}>
-              {data.map((entry, index) => (
-                <Cell cursor="pointer" fill={index === activeIndex ? '#181823' : '#645CBB'} key={`cell-${index}`} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
-        <p className="content">{`"${activeItem.name}": ${activeItem.uv}`}</p>
-      </div>
-      </div>
-      </div>
+      <div className="title">{this.props.title}</div>
+      <ResponsiveContainer width="100%" height={150}>
+        <BarChart width={150} height={80} data={data}>
+          <Bar dataKey="uv" onClick={this.handleClick}>
+            {data.map((entry, index) => (
+              <Cell cursor="pointer" fill={index === activeIndex ? '#181823' : '#645CBB'} key={`cell-${index}`} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+      <p className="content">{`"${activeItem.name}": ${activeItem.uv}`}</p>
+    </div>
+  </div>
+      </div >
     )
   }
 }

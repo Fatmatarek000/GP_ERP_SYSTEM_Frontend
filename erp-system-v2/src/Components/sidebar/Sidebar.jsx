@@ -1,5 +1,6 @@
 import React from "react";
 import "./sidebar.scss";
+import OutputIcon from '@mui/icons-material/Output';
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
@@ -20,7 +21,7 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import MovingIcon from '@mui/icons-material/Moving';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import { DarkModeContext } from './../../context/darkModeContext';
-import {useContext} from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
@@ -29,155 +30,162 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="top">
-      
-      <Link to="/" style={{ textDecoration: "none" }}>
-      <span className="logo">ERP System</span>
-    </Link>
+
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">ERP System</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">Dashboard</p>
           <li>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <LineStyleIcon className="icon"/>
-            <span>Home</span>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <LineStyleIcon className="icon" />
+              <span>Home</span>
             </Link>
           </li>
-    
+
           <p className="title">LISTS</p>
           <li>
-          <Link to="/users" style={{ textDecoration: "none" }}>
+            <Link to="/users" style={{ textDecoration: "none" }}>
 
-            <PersonOutlineIcon className="icon" />
-            <span>Users</span>
+              <PersonOutlineIcon className="icon" />
+              <span>Users</span>
             </Link>
           </li>
           <li>
-          <Link to="/employee" style={{ textDecoration: "none" }}>
+            <Link to="/employee" style={{ textDecoration: "none" }}>
 
-            <GroupsIcon className="icon" />
-            <span>Employees</span>
+              <GroupsIcon className="icon" />
+              <span>Employees</span>
             </Link>
           </li>
           <li>
-          <Link to="/customer" style={{ textDecoration: "none" }}>
+            <Link to="/customer" style={{ textDecoration: "none" }}>
 
-            <PeopleAltIcon className="icon" />
-            <span>Customers</span>
+              <PeopleAltIcon className="icon" />
+              <span>Customers</span>
             </Link>
           </li>
           <li>
-          <Link to="/supply" style={{ textDecoration: "none" }}>
+            <Link to="/supply" style={{ textDecoration: "none" }}>
 
-            <MovingIcon className="icon" />
-            <span>Suppliers</span>
+              <MovingIcon className="icon" />
+              <span>Suppliers</span>
             </Link>
           </li>
           <li>
-          <Link to="/products" style={{ textDecoration: "none" }}>
+            <Link to="/products" style={{ textDecoration: "none" }}>
 
-            <StoreIcon className="icon" />
-            <span>Products</span>
+              <StoreIcon className="icon" />
+              <span>Products</span>
             </Link>
           </li>
           <li>
-          <Link to="/transactions" style={{ textDecoration: "none" }}>
+            <Link to="/distributors" style={{ textDecoration: "none" }}>
 
-            <AttachMoneyIcon className="icon" />
-            <span>Transaction</span>
+              <OutputIcon className="icon" />
+              <span>Distributors</span>
             </Link>
           </li>
           <li>
-          <Link to="/report" style={{ textDecoration: "none" }}>
+            <Link to="/transactions" style={{ textDecoration: "none" }}>
 
-          <AssessmentIcon className="icon" />
-          
-            <span>Reports</span>
+              <AttachMoneyIcon className="icon" />
+              <span>Transaction</span>
             </Link>
           </li>
           <li>
-          <Link to="/orders" style={{ textDecoration: "none" }}>
+            <Link to="/report" style={{ textDecoration: "none" }}>
 
-            <CreditCardIcon className="icon" /> <span>Orders</span>
+              <AssessmentIcon className="icon" />
+
+              <span>Reports</span>
             </Link>
           </li>
           <li>
-          <Link to="/delivery" style={{ textDecoration: "none" }}>
+            <Link to="/orders" style={{ textDecoration: "none" }}>
 
-            <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
+              <CreditCardIcon className="icon" /> <span>Orders</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/delivery" style={{ textDecoration: "none" }}>
+
+              <LocalShippingIcon className="icon" />
+              <span>Delivery</span>
             </Link>
           </li>
           <p className="title">Sales</p>
           <li>
-          <Link to="/overview" style={{ textDecoration: "none" }}>
-            <PointOfSaleIcon className="icon"/>
-            <span>Overview</span>
+            <Link to="/overview" style={{ textDecoration: "none" }}>
+              <PointOfSaleIcon className="icon" />
+              <span>Overview</span>
             </Link>
           </li>
 
           <li>
-          <Link to="/daily" style={{ textDecoration: "none" }}>
-            <TodayOutlinedIcon className="icon"/>
-            <span>Daily</span>
+            <Link to="/daily" style={{ textDecoration: "none" }}>
+              <TodayOutlinedIcon className="icon" />
+              <span>Daily</span>
             </Link>
           </li>
           <li>
-          <Link to="/monthly" style={{ textDecoration: "none" }}>
-            <CalendarMonthOutlinedIcon className="icon"/>
-            <span>Monthly</span>
+            <Link to="/monthly" style={{ textDecoration: "none" }}>
+              <CalendarMonthOutlinedIcon className="icon" />
+              <span>Monthly</span>
             </Link>
           </li>
-          
+
           <p className="title">Analysis</p>
 
           <li>
-          <Link to="/analysis" style={{ textDecoration: "none" }}>
+            <Link to="/analysis" style={{ textDecoration: "none" }}>
 
-            <TimelineIcon className="icon"/>
-            
-            <span>Analysis</span>
+              <TimelineIcon className="icon" />
+
+              <span>Analysis</span>
             </Link>
           </li>
           <p className="title">SERVICE</p>
           <li>
-          <Link to="/system-health" style={{ textDecoration: "none" }}>
+            <Link to="/system-health" style={{ textDecoration: "none" }}>
 
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />{" "}
-            <span>System Health</span>
+              <SettingsSystemDaydreamOutlinedIcon className="icon" />{" "}
+              <span>System Health</span>
             </Link>
           </li>
           <li>
-          <Link to="/logs" style={{ textDecoration: "none" }}>
+            <Link to="/logs" style={{ textDecoration: "none" }}>
 
-            <PsychologyOutlinedIcon className="icon" /> <span>Logs</span>
+              <PsychologyOutlinedIcon className="icon" /> <span>Logs</span>
             </Link>
           </li>
           <li>
-          <Link to="/setting" style={{ textDecoration: "none" }}>
+            <Link to="/setting" style={{ textDecoration: "none" }}>
 
-            <SettingsApplicationsIcon className="icon" /> <span>Settings</span>
+              <SettingsApplicationsIcon className="icon" /> <span>Settings</span>
             </Link>
           </li>
           <p className="title">USER</p>
           <li>
-          <Link to="/profile" style={{ textDecoration: "none" }}>
+            <Link to="/profile" style={{ textDecoration: "none" }}>
 
-            <AccountCircleOutlinedIcon className="icon" /> <span>Profile</span>
+              <AccountCircleOutlinedIcon className="icon" /> <span>Profile</span>
             </Link>
           </li>
           <li>
-          <Link to="/logout" style={{ textDecoration: "none" }}>
+            <Link to="/logout" style={{ textDecoration: "none" }}>
 
-            <ExitToAppIcon className="icon" /> <span>Logout</span>
+              <ExitToAppIcon className="icon" /> <span>Logout</span>
             </Link>
           </li>
         </ul>
       </div>
       <div className="bottom">
-      <div className="colorOption" onClick={() => dispatch({ type: "LIGHT" })}></div>
-      <div className="colorOption"  onClick={() => dispatch({ type: "DARK" })}></div>
+        <div className="colorOption" onClick={() => dispatch({ type: "LIGHT" })}></div>
+        <div className="colorOption" onClick={() => dispatch({ type: "DARK" })}></div>
       </div>
     </div>
   );
