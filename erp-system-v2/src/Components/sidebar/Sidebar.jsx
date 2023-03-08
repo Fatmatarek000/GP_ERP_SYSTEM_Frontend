@@ -97,7 +97,7 @@ function Sidebar() {
             </Link>
           </li>
           <li>
-            <Link to="/report" style={{ textDecoration: "none" }}>
+            <Link to="/reports" style={{ textDecoration: "none" }}>
 
               <AssessmentIcon className="icon" />
 
