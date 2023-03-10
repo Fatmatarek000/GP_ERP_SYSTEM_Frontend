@@ -23,6 +23,12 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import { DarkModeContext } from './../../context/darkModeContext';
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AccountBalanceIcon } from '@mui/icons-material';
+import { AutoAwesomeMotionIcon } from '@mui/icons-material';
+import { AcUnitIcon } from '@mui/icons-material/AcUnit';
+import { CategoryIcon } from '@mui/icons-material/Category';
+import { Inventory2OutlinedIcon } from '@mui/icons-material';
+import { AssignmentIndIcon } from '@mui/icons-material';
 
 function Sidebar() {
   const { dispatch } = useContext(DarkModeContext);
@@ -47,22 +53,28 @@ function Sidebar() {
           </li>
 
           <p className="title">LISTS</p>
-          <li>
-            <Link to="/users" style={{ textDecoration: "none" }}>
 
-              <PersonOutlineIcon className="icon" />
-              <span>Users</span>
+         
+
+          <li>
+          <Link to="/employee" style={{ textDecoration: "none" }}>
+
+            <GroupsIcon className="icon" />
+            <span>Employees</span>
             </Link>
           </li>
           <li>
-            <Link to="/employee" style={{ textDecoration: "none" }}>
 
-              <GroupsIcon className="icon" />
-              <span>Employees</span>
+
+            <Link to="/distributer" style={{ textDecoration: "none" }}>
+
+            <PersonOutlineIcon className="icon" />
+            <span>Distributor</span>
             </Link>
           </li>
           <li>
-            <Link to="/customer" style={{ textDecoration: "none" }}>
+
+          <Link to="/customer" style={{ textDecoration: "none" }}>
 
               <PeopleAltIcon className="icon" />
               <span>Customers</span>
@@ -71,50 +83,99 @@ function Sidebar() {
           <li>
             <Link to="/supply" style={{ textDecoration: "none" }}>
 
-              <MovingIcon className="icon" />
-              <span>Suppliers</span>
+            <MovingIcon className="icon" />
+            <span>Suppliers</span>
+            </Link>
+          </li>
+          <p className="title">Products</p>
+          <li>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+
+
+            <StoreIcon className="icon" />
+            <span>Products</span>
             </Link>
           </li>
           <li>
-            <Link to="/products" style={{ textDecoration: "none" }}>
+          <Link to="/transactions" style={{ textDecoration: "none" }}>
+
+            <AttachMoneyIcon className="icon" />
+            <span>Transaction</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/report" style={{ textDecoration: "none" }}>
+
+          <AssessmentIcon className="icon" />
+          
+            <span>Reports</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/orders" style={{ textDecoration: "none" }}>
+
+            <CreditCardIcon className="icon" /> <span>Orders</span>
 
               <StoreIcon className="icon" />
-              <span>Products</span>
+              <span>AllProducts</span>
             </Link>
           </li>
           <li>
-            <Link to="/distributors" style={{ textDecoration: "none" }}>
+          <Link to="/productsinventory" style={{ textDecoration: "none" }}>
 
-              <OutputIcon className="icon" />
-              <span>Distributors</span>
+              <AccountBalanceIcon className="icon" />
+              <span>productsinventory</span>
             </Link>
           </li>
           <li>
-            <Link to="/transactions" style={{ textDecoration: "none" }}>
+          <Link to="/rawmatrial" style={{ textDecoration: "none" }}>
 
-              <AttachMoneyIcon className="icon" />
-              <span>Transaction</span>
+            <AutoAwesomeMotionIcon className="icon" />
+            <span>RawMaterial</span>
             </Link>
           </li>
           <li>
-            <Link to="/reports" style={{ textDecoration: "none" }}>
+          <Link to="/rawmatrialinventory" style={{ textDecoration: "none" }}>
 
-              <AssessmentIcon className="icon" />
+            <AcUnitIcon className="icon" />
+            <span>RawMaterialInventory</span>
+            </Link>
+          </li>
 
-              <span>Reports</span>
+          
+          <li>
+          <Link to="/category" style={{ textDecoration: "none" }}>
+
+            <CategoryIcon className="icon" /> <span>Category</span>
+
             </Link>
           </li>
           <li>
-            <Link to="/orders" style={{ textDecoration: "none" }}>
+          <Link to="/delivery" style={{ textDecoration: "none" }}>
 
-              <CreditCardIcon className="icon" /> <span>Orders</span>
+            <LocalShippingIcon className="icon" />
+            <span>Delivery</span>
             </Link>
           </li>
           <li>
-            <Link to="/delivery" style={{ textDecoration: "none" }}>
+          <Link to="/financial" style={{ textDecoration: "none" }}>
 
-              <LocalShippingIcon className="icon" />
-              <span>Delivery</span>
+            <AttachMoneyIcon className="icon" />
+            <span>Financial</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/stock" style={{ textDecoration: "none" }}>
+
+            <Inventory2OutlinedIcon className="icon" />
+            <span>Stock</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/hr" style={{ textDecoration: "none" }}>
+
+            <AssignmentIndIcon className="icon" />
+            <span>HR</span>
             </Link>
           </li>
           <p className="title">Sales</p>
